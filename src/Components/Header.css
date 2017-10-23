@@ -1,0 +1,14 @@
+.header {
+    background-color: #2d2d2d;
+    text-align: center;
+    width: 100%;
+}
+
+  .header__heading {
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 4em;
+    font-family: Chiller, comic, cursive;
+    color: #00d8ff;
+    font-weight: bolder;
+  }
