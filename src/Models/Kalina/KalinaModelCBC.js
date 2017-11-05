@@ -1,4 +1,5 @@
-export default class KalinaModel {
+var CryptoJS = require("crypto-js");
+export default class DesModelCBC {
   constructor() {
 
   }
@@ -11,8 +12,12 @@ export default class KalinaModel {
    */
   encrypt(mode, key, msg) {
     // todo smth
+     let encrypted = CryptoJS.TripleDES.encrypt(msg, key, {
+        mode: CryptoJS.mode.CBC,
+        padding: CryptoJS.pad.Pkcs7
+    });
     console.log('called KalinaModel.encrypt(mode, key, msg) with args = ', mode, key, msg);
-    return 'this is encrypted msg';
+    return encrypted.toString();
   }
 
   /**
@@ -23,7 +28,11 @@ export default class KalinaModel {
    */
   decrypt(mode, key, msg) {
     // todo smth
+    let decrypted = CryptoJS.TripleDES.decrypt(msg, key, {
+        mode: CryptoJS.mode.CBC,
+        padding: CryptoJS.pad.Pkcs7
+    });
     console.log('called KalinaModel.decrypt(mode, key, msg) with args = ', mode, key, msg);
-    return 'this is decrypt msg';
+    return decrypted.toString(CryptoJS.enc.Utf8);
   }
 }

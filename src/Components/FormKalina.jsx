@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import KalinaModel from '../Models/KalinaModel';
+import KalinaModel from '../Models/Kalina/KalinaModelCBC';
 import "./FormKalina.css";
 
 export default class FormKalina extends Component {
