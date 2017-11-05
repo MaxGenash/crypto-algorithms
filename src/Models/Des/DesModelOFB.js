@@ -1,5 +1,5 @@
 var CryptoJS = require("crypto-js");
-export default class AesModel {
+export default class DesModelOFB {
   constructor() {
 
   }
@@ -11,10 +11,12 @@ export default class AesModel {
    * @returns {string}
    */
   encrypt(mode, key, msg) {
-    debugger;
-   
     // todo smth
-    console.log('called AesModel.encrypt(mode, key, msg) with args = ', mode, key, msg);
+     let encrypted = CryptoJS.DES.encrypt(msg, key, {
+        mode: CryptoJS.mode,
+        padding: CryptoJS.pad.Pkcs7
+    });
+    console.log('called DesModel.encrypt(mode, key, msg) with args = ', mode, key, msg);
     return 'this is encrypted msg';
   }
 
@@ -26,7 +28,7 @@ export default class AesModel {
    */
   decrypt(mode, key, msg) {
     // todo smth
-    console.log('called AesModel.decrypt(mode, key, msg) with args = ', mode, key, msg);
+    console.log('called DesModel.decrypt(mode, key, msg) with args = ', mode, key, msg);
     return 'this is decrypt msg';
   }
 }

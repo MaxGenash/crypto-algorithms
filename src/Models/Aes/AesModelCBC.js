@@ -1,5 +1,5 @@
 var CryptoJS = require("crypto-js");
-export default class AesModel {
+export default class AesModelCBC {
   constructor() {
 
   }
@@ -11,11 +11,14 @@ export default class AesModel {
    * @returns {string}
    */
   encrypt(mode, key, msg) {
-    debugger;
-   
     // todo smth
+    let encrypted = CryptoJS.AES.encrypt(msg, key, {
+        mode: CryptoJS.mode.CBC,
+        padding: CryptoJS.pad.Pkcs7
+    });
     console.log('called AesModel.encrypt(mode, key, msg) with args = ', mode, key, msg);
-    return 'this is encrypted msg';
+    
+    return encrypted.toString();
   }
 
   /**
@@ -25,8 +28,11 @@ export default class AesModel {
    * @returns {string}
    */
   decrypt(mode, key, msg) {
-    // todo smth
+    let decrypted = CryptoJS.AES.decrypt(msg, key, {
+        mode: CryptoJS.mode.CBC,
+        padding: CryptoJS.pad.Pkcs7
+    });
     console.log('called AesModel.decrypt(mode, key, msg) with args = ', mode, key, msg);
-    return 'this is decrypt msg';
+    return decrypted.toString(CryptoJS.enc.Utf8);
   }
 }
