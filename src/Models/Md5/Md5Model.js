@@ -1,10 +1,12 @@
+var CryptoJS = require("crypto-js");
+
 export default class Md5Model{
 
     constructor() {
     }
 
     hash(inputMsg) {
-        var hasher = require("md5");
+        return CryptoJS.MD5(inputMsg).toString();
     }
 
 }
