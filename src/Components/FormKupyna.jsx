@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Sha3Model from '../Models/Sha3/Sha3Model';
+import KupynaModel from '../Models/Kupyna/KupynaModel';
 import "./FormSha3.css";
 
-export default class FormSha3 extends Component {
+export default class FormKupyna extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,7 @@ export default class FormSha3 extends Component {
             result: '',
         };
 
-        this._model = new Sha3Model();
+        this._model = new KupynaModel();
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -27,7 +27,7 @@ export default class FormSha3 extends Component {
     render() {
         return (
             <section>
-                <h2>SHA3 algorithm </h2>
+                <h2>Kupyna algorithm </h2>
                 <select
                     value={this.state.outputLength}
                     className="form-control"
