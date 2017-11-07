@@ -9,6 +9,7 @@ import FormKalina from './FormKalina'
 import ToDo from './ToDo'
 import './App.css';
 import FormMd5 from "./FormMd5";
+import FormSha3 from "./FormSha3";
 
 export default class App extends Component {
   render() {
@@ -27,7 +28,7 @@ export default class App extends Component {
                 <Route path="/public-key/rsa" component={ToDo} />
                 <Route path="/public-key/elgamal" component={ToDo} />
                 <Route path="/hashing/md5" component={FormMd5} />
-                <Route path="/hashing/sha3" component={ToDo} />
+                <Route path="/hashing/sha3" component={FormSha3} />
                 <Route path="/hashing/kupyna" component={ToDo} />
                 <Route path="/digital-signatures/rsa" component={ToDo} />
                 <Route path="/digital-signatures/elgamal" component={ToDo} />
