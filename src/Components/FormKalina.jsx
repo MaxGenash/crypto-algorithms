@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import KalinaModel from '../Models/KalinaModel';
-import "./FormKalina.css";
 
 export default class FormKalina extends Component {
   constructor(props) {
@@ -31,7 +30,7 @@ export default class FormKalina extends Component {
   render() {
     return (
       <section>
-        <h2> ДСТУ 7624:2014 (Kalina) algorithm </h2>
+        <h2> Symmetric-key DSTU 7624:2014 (Kalina) algorithm </h2>
         <form className="form-horizontal initial-data-form" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label className="control-label">

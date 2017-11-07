@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import AesModel from '../Models/AesModel';
-import "./FormAes.css";
 
 export default class FormDes extends Component {
   constructor(props) {
@@ -31,7 +30,7 @@ export default class FormDes extends Component {
   render() {
     return (
       <section>
-        <h2>AES algorithm</h2>
+        <h2> Symmetric-key AES algorithm </h2>
         <form className="form-horizontal initial-data-form" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label className="control-label">

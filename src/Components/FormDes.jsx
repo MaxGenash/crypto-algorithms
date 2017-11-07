@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DesModel from '../Models/DesModel';
-import "./FormDes.css";
 
 export default class FormDes extends Component {
   constructor(props) {
@@ -31,7 +30,7 @@ export default class FormDes extends Component {
   render() {
     return (
       <section>
-        <h2>DES algorithm</h2>
+        <h2> Symmetric-key DES algorithm </h2>
         <form className="form-horizontal initial-data-form" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label className="control-label">

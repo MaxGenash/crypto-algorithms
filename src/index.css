@@ -8,3 +8,7 @@ abbr[title],
 abbr[data-original-title] {
   text-decoration: none;
 }
+
+.result-text {
+  word-break: break-all;
+}
