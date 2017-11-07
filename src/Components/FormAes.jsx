@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AesModel from '../Models/AesModel';
+import AesModel from '../Models/Aes/AesModelCBC';
 import "./FormAes.css";
 
 export default class FormDes extends Component {

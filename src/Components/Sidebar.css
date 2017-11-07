@@ -14,14 +14,16 @@
     margin: 10px 0 3px;
   }
 
-  .sidebar .nav > li > a {
-    display: block;
-    color: black;
-  }
-  .sidebar .nav > li > a:focus,
-  .sidebar .nav > li > a:hover {
-    color: #cc7a6f;
-  }
+      .sidebar .nav > li > a {
+        display: block;
+        color: black;
+        line-height: 1.2em;
+        margin: 5px 0;
+      }
+      .sidebar .nav > li > a:focus,
+      .sidebar .nav > li > a:hover {
+        color: #cc7a6f;
+      }
 
 @media (min-width: 768px) {
   .sidebar {

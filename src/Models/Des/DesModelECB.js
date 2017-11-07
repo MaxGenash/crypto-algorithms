@@ -1,4 +1,5 @@
-export default class KalinaModel {
+var CryptoJS = require("crypto-js");
+export default class DesModelECB {
   constructor() {
 
   }
@@ -11,7 +12,11 @@ export default class KalinaModel {
    */
   encrypt(mode, key, msg) {
     // todo smth
-    console.log('called KalinaModel.encrypt(mode, key, msg) with args = ', mode, key, msg);
+     let encrypted = CryptoJS.DES.encrypt(msg, key, {
+        mode: CryptoJS.mode,
+        padding: CryptoJS.pad.Pkcs7
+    });
+    console.log('called DesModel.encrypt(mode, key, msg) with args = ', mode, key, msg);
     return 'this is encrypted msg';
   }
 
@@ -23,7 +28,7 @@ export default class KalinaModel {
    */
   decrypt(mode, key, msg) {
     // todo smth
-    console.log('called KalinaModel.decrypt(mode, key, msg) with args = ', mode, key, msg);
+    console.log('called DesModel.decrypt(mode, key, msg) with args = ', mode, key, msg);
     return 'this is decrypt msg';
   }
 }

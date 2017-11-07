@@ -6,6 +6,7 @@ import Sidebar from './Sidebar'
 import FormAes from './FormAes'
 import FormDes from './FormDes'
 import FormKalina from './FormKalina'
+import ToDo from './ToDo'
 import './App.css';
 
 export default class App extends Component {
@@ -18,10 +19,23 @@ export default class App extends Component {
             <Sidebar/>
             <main className="col-12 col-md-9 col-xl-9 py-md-3 pl-md-5 main" role="main">
               <Switch>
-                <Redirect exact from="/" to='aes' />
-                <Route path="/aes" component={FormAes} />
-                <Route path="/des" component={FormDes} />
-                <Route path="/kalina" component={FormKalina} />
+                <Redirect exact from="/" to="aes" />
+                <Route path="/symmetric-key/aes" component={FormAes} />
+                <Route path="/symmetric-key/des" component={FormDes} />
+                <Route path="/symmetric-key/kalina" component={FormKalina} />
+                <Route path="/public-key/rsa" component={ToDo} />
+                <Route path="/public-key/elgamal" component={ToDo} />
+                <Route path="/hashing/md5" component={ToDo} />
+                <Route path="/hashing/sha3" component={ToDo} />
+                <Route path="/hashing/kupyna" component={ToDo} />
+                <Route path="/digital-signatures/rsa" component={ToDo} />
+                <Route path="/digital-signatures/elgamal" component={ToDo} />
+                <Route path="/digital-signatures/schnorr" component={ToDo} />
+                <Route path="/digital-signatures/rabin" component={ToDo} />
+                <Route path="/utils/extended_euclid_gcd_1" component={ToDo} />
+                <Route path="/utils/extended_euclid_gcd_2" component={ToDo} />
+                <Route path="/utils/sieve_of_eratosthenes" component={ToDo} />
+                <Route path="/utils/euclid_gcd" component={ToDo} />
               </Switch>
             </main>
           </div>
