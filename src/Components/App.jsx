@@ -7,6 +7,7 @@ import FormAes from './FormAes'
 import FormDes from './FormDes'
 import FormKalina from './FormKalina'
 import FormRsa from './FormRsa'
+import FormElGamal from './FormElGamal'
 import ToDo from './ToDo'
 import './App.css';
 
@@ -25,7 +26,7 @@ export default class App extends Component {
                 <Route path="/symmetric-key/des" component={FormDes} />
                 <Route path="/symmetric-key/kalina" component={FormKalina} />
                 <Route path="/public-key/rsa" component={FormRsa} />
-                <Route path="/public-key/elgamal" component={ToDo} />
+                <Route path="/public-key/elgamal" component={FormElGamal} />
                 <Route path="/hashing/md5" component={ToDo} />
                 <Route path="/hashing/sha3" component={ToDo} />
                 <Route path="/hashing/kupyna" component={ToDo} />

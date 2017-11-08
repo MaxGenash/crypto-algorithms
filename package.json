@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "big.js": "^3.0.1",
     "bootstrap": "^4.0.0-beta.2",
     "classnames": "^2.2.5",
     "crypto": "^1.0.1",
+    "elgamal": "^0.3.0",
     "font-awesome": "^4.7.0",
     "jsencrypt": "^2.3.1",
     "milagro-crypto-js": "https://github.com/milagro-crypto/milagro-crypto-js",
