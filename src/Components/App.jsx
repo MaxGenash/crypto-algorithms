@@ -8,6 +8,9 @@ import FormDes from './FormDes'
 import FormKalina from './FormKalina'
 import FormRsa from './FormRsa'
 import FormElGamal from './FormElGamal'
+import FormMd5 from "./FormMd5";
+import FormSha3 from "./FormSha3";
+import FormKupyna from "./FormKupyna";
 import ToDo from './ToDo'
 import './App.css';
 
@@ -27,9 +30,9 @@ export default class App extends Component {
                 <Route path="/symmetric-key/kalina" component={FormKalina} />
                 <Route path="/public-key/rsa" component={FormRsa} />
                 <Route path="/public-key/elgamal" component={FormElGamal} />
-                <Route path="/hashing/md5" component={ToDo} />
-                <Route path="/hashing/sha3" component={ToDo} />
-                <Route path="/hashing/kupyna" component={ToDo} />
+                <Route path="/hashing/md5" component={FormMd5} />
+                <Route path="/hashing/sha3" component={FormSha3} />
+                <Route path="/hashing/kupyna" component={FormKupyna} />
                 <Route path="/digital-signatures/rsa" component={ToDo} />
                 <Route path="/digital-signatures/elgamal" component={ToDo} />
                 <Route path="/digital-signatures/schnorr" component={ToDo} />

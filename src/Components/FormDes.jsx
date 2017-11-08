@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DesModel from '../Models/DesModel';
+import DesModel from '../Models/Des/DesModelCBC';
 
 export default class FormDes extends Component {
   constructor(props) {
