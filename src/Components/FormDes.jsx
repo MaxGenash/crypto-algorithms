@@ -47,22 +47,6 @@ export default class FormDes extends Component {
           </div>
           <div className="form-group">
             <label className="control-label">
-              <strong>Mode:</strong>
-            </label>
-            <select
-              value={this.state.mode}
-              className="form-control"
-              onChange={e => this.setState({mode: e.target.value})}
-            >
-              <option value="ecb">ECB (electronic codebook)</option>
-              <option value="cbc">CBC (cipher block chaining)</option>
-              <option value="pcpc">PCBC (propagating cipher block chaining)</option>
-              <option value="cfb">CFB (cipher feedback)</option>
-              <option value="ofb">OFB (output feedback, in 8bit)</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label className="control-label">
               <strong>Key:</strong>
             </label>
             <input

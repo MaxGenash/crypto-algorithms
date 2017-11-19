@@ -6,7 +6,6 @@ export default class FormDes extends Component {
     super(props);
     this.state = {
       way: 'enc',
-      mode: 'ecb',
       key: '',
       text: '',
       result: '',
@@ -21,9 +20,9 @@ export default class FormDes extends Component {
     e.preventDefault();
     let result;
     if(this.state.way === 'enc')
-      result = this._model.encrypt(this.state.mode, this.state.key, this.state.text);
+      result = this._model.encrypt(this.state.key, this.state.text);
     else
-      result = this._model.decrypt(this.state.mode, this.state.key, this.state.text);
+      result = this._model.decrypt(this.state.key, this.state.text);
     this.setState({result});
   }
 
@@ -43,22 +42,6 @@ export default class FormDes extends Component {
             >
               <option value="enc">Encryption</option>
               <option value="dec">Decryption</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label className="control-label">
-              <strong>Mode:</strong>
-            </label>
-            <select
-              value={this.state.mode}
-              className="form-control"
-              onChange={e => this.setState({mode: e.target.value})}
-            >
-              <option value="ecb">ECB (electronic codebook)</option>
-              <option value="cbc">CBC (cipher block chaining)</option>
-              <option value="pcpc">PCBC (propagating cipher block chaining)</option>
-              <option value="cfb">CFB (cipher feedback)</option>
-              <option value="ofb">OFB (output feedback, in 8bit)</option>
             </select>
           </div>
           <div className="form-group">
