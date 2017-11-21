@@ -1,0 +1,7 @@
+.visible-for-third-parties {
+    color: #ff421e
+}
+
+.not-visible-for-third-parties {
+    color: cornflowerblue;
+}
