@@ -13,6 +13,7 @@ import FormSha3 from "./FormSha3";
 import FormKupyna from "./FormKupyna";
 import ToDo from './ToDo'
 import './App.css';
+import FormDiffieHellman from "./Protocol/DiffieHellman/FormDiffieHellman";
 
 export default class App extends Component {
   render() {
@@ -41,6 +42,7 @@ export default class App extends Component {
                 <Route path="/utils/extended_euclid_gcd_2" component={ToDo} />
                 <Route path="/utils/sieve_of_eratosthenes" component={ToDo} />
                 <Route path="/utils/euclid_gcd" component={ToDo} />
+                <Route path="/protocols/diffie_hellman" component={FormDiffieHellman} />
               </Switch>
             </main>
           </div>
