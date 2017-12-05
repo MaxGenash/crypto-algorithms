@@ -63,6 +63,15 @@ export default function Footer() {
           </ul>
         </li>
         <li className="">
+          <h5 className="sidebar-submenu-heading">Crypto Protocols</h5>
+          <ul className="nav flex-column sidebar-submenu">
+            <li className="">
+              <NavLink to={'/protocols/diffie_hellman'}>Diffie - Hellman</NavLink>
+            </li>
+
+          </ul>
+        </li>
+        <li className="">
           <h5 className="sidebar-submenu-heading">Utilities</h5>
           <ul className="nav flex-column sidebar-submenu">
             <li className="">
