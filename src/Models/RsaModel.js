@@ -1,10 +1,6 @@
 import {JSEncrypt} from 'jsencrypt';
 
 export default class RsaModel {
-  constructor() {
-
-  }
-
   /**
    * @param {String} key
    * @param {String} msg

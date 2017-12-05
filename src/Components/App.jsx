@@ -11,6 +11,9 @@ import FormElGamal from './FormElGamal'
 import FormMd5 from "./FormMd5";
 import FormSha3 from "./FormSha3";
 import FormKupyna from "./FormKupyna";
+import FormEuclidGcd from "./FormEuclidGcd";
+import FormExtendedEuclidGcd from "./FormExtendedEuclidGcd";
+import FormExtendedEuclidCongruenceRelation from "./FormExtendedEuclidCongruenceRelation";
 import ToDo from './ToDo'
 import './App.css';
 
@@ -22,7 +25,7 @@ export default class App extends Component {
         <section className="container-fluid section-main">
           <div className="row">
             <Sidebar/>
-            <main className="col-12 col-md-9 col-xl-9 py-md-3 pl-md-5 main" role="main">
+            <main className="col-12 col-md-8 col-xl-9 main" role="main">
               <Switch>
                 <Redirect exact from="/" to="aes" />
                 <Route path="/symmetric-key/aes" component={FormAes} />
@@ -37,10 +40,10 @@ export default class App extends Component {
                 <Route path="/digital-signatures/elgamal" component={ToDo} />
                 <Route path="/digital-signatures/schnorr" component={ToDo} />
                 <Route path="/digital-signatures/rabin" component={ToDo} />
-                <Route path="/utils/extended_euclid_gcd_1" component={ToDo} />
-                <Route path="/utils/extended_euclid_gcd_2" component={ToDo} />
+                <Route path="/utils/extended_euclid_gcd" component={FormExtendedEuclidGcd} />
+                <Route path="/utils/extended_euclid_congruence_relation" component={FormExtendedEuclidCongruenceRelation} />
                 <Route path="/utils/sieve_of_eratosthenes" component={ToDo} />
-                <Route path="/utils/euclid_gcd" component={ToDo} />
+                <Route path="/utils/euclid_gcd" component={FormEuclidGcd} />
               </Switch>
             </main>
           </div>

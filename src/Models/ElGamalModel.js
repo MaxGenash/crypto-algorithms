@@ -19,7 +19,7 @@ function primRoot(val) {
 
     for (let j = 0; j < val / 2; j++) {
       start = start.mul(i).mod(val);
-      if (start.mod(val).toString() == '1') {
+      if (start.mod(val).toString() === '1') {
         flag = false;
         break;
       }
@@ -46,7 +46,7 @@ function sieve(n) {
   }
 
   for (let k = 2; k * k <= n; k++) {
-    if (s[k] == 1) {
+    if (s[k] === 1) {
       for (let l = k * k; l <= n; l += k) {
         s[l] = 0;
       }
@@ -74,10 +74,6 @@ function randEasyNum() {
 }
 
 export default class ElGamalModel {
-  constructor() {
-
-  }
-
   /**
    * @param {String} keys
    * @param {Object} message

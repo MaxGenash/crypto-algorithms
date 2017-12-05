@@ -12,3 +12,7 @@ abbr[data-original-title] {
 .result-text {
   word-break: break-all;
 }
+
+.no-text-carry {
+  white-space: nowrap;
+}

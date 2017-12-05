@@ -73,15 +73,15 @@ export default function Footer() {
               </NavLink>
             </li>
             <li className="">
-              <NavLink to={'/utils/extended_euclid_gcd_1'}>
+              <NavLink to={'/utils/extended_euclid_gcd'}>
                 <abbr title="The greatest common divisor">GCD</abbr> Euclid's algorithm
                 <br/>
                 d = ax +  by
               </NavLink>
             </li>
             <li className="">
-              <NavLink to={'/utils/extended_euclid_gcd_2'}>
-                <abbr title="The greatest common divisor">GCD</abbr> Euclid's algorithm
+              <NavLink to={'/utils/extended_euclid_congruence_relation'}>
+                Euclid's algorithm for
                 <br/>
                 ax ≡ b mod n
               </NavLink>
